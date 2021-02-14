@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+    <head>
+        <meta charset = "utf8">
+        <title>Recipe Creator</title>
+        <link rel="stylesheet" type="text/css" href="ps4.css"> 
+        <script src = "ps4.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Create Your Own Recipe!</h1>
+        </header>
+
+        <main>
+            <section id = "images">
+                <!-- https://www.freeimages.com/photo/ingredients-for-a-meal-1324588 -->
+                <img id="img1" src="ingredients-for-a-meal-1324588.jpg" alt="ingredients on a cutting board">
+                <!-- https://www.freeimages.com/photo/italian-homemade-bread-1-1329086 -->
+                <img id="img2" src="italian-homemade-bread-1-1329086.jpg" alt="bread loaves">
+                <!-- https://www.freeimages.com/photo/recipe-1538714 -->
+                <img id="img3" src="recipe-1538714.jpg" alt="ingredients on a cutting board">
+            </section>
+
+            <section>
+                <h2>Ingredients</h2>
+                <ul id = "ingredients_list"></ul>
+                <label for="iname">Ingredient:</label>
+                <input type="text" id="iname">
+                <label for="iamount">Amount:</label>
+                <input type="text" id="iamount">
+                
+                <label for="iunit">Unit:</label>
+                <select id="iunit">
+                    <option value="cup(s)">Cup(s)</option>
+                    <option value="teaspoon(s0">Teaspoon(s)</option>
+                    <option value="tablespoon(s)">Tablespoon(s)</option>
+                    <option value="ounce(s)">Ounce(s)</option>
+                  </select>
+
+                <input type="submit" id="addIngredient" value="Add Ingredient">
+            </section>
+
+            <section>
+                <h2>Instructions</h2>
+                <ol id = "instructions_list"></ol>
+                <textarea id="instruction">Enter instruction here...</textarea>
+                <input type="submit" id="addInstruction" value="Add">
+            </section>
+
+            <section>
+                <h2>When you are finished...</h2>
+                <input type="submit" id = "generateRecipe" value = "Generate Recipe!" >
+            </section>
+
+        </main>
+
+    </body>
+
+</html>
