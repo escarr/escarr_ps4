@@ -7,9 +7,8 @@ addIngred.addEventListener("click", () => {
     const ingredientName = document.getElementById("iname").value;
     const ingredientAmount = document.getElementById("iamount").value;
     const ingredientUnit = document.getElementById("iunit").value;
-    const ingredientText = ingredientName + ': ' + ingredientAmount + ' ' + ingredientUnit
-    newIngredient.appendChild(document.createTextNode(ingredientText));
-    ingredientsList.appendChild(newIngredient);
+    newIngredient.textContent = ingredientName + ': ' + ingredientAmount + ' ' + ingredientUnit
+    ingredientsList.append(newIngredient);
     // clear inputs
     document.getElementById("iname").value = "";
     document.getElementById("iamount").value = "";
@@ -25,8 +24,8 @@ addInstruc.addEventListener("click", () => {
   const ingredientsList = document.getElementById("instructions_list");
   const newInstruction = document.createElement("li");
   const InstructionText = document.getElementById("instruction").value;
-  newInstruction.appendChild(document.createTextNode(InstructionText));
-  ingredientsList.appendChild(newInstruction);
+  newInstruction.textContent = InstructionText;
+  ingredientsList.append(newInstruction);
   // clear input
   document.getElementById("instruction").value = "";
 });
